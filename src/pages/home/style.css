@@ -1,0 +1,40 @@
+/* Estilos gerais da página */
+.home-page {
+  background-color: #a6ceb6;
+  min-height: 100vh; /* Isso garante que a página ocupe toda a altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos do Card 1 */
+.card-1 {
+  width: 90%; /* Defina o tamanho fixo para o Card 1 */
+  height: 90vh; /* Defina o tamanho fixo para o Card 1 */
+  border-radius: 54px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 10px 100px 20px rgba(132, 132, 132, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centralize o conteúdo verticalmente */
+}
+
+/* Estilos do Card 2 */
+.card-2 {
+  display: flex;
+  border-radius: 30px;
+  background: #f5f3f0;
+  overflow: hidden;
+  width: 100%; /* Garanta que o Card 2 ocupe todo o espaço disponível no Card 1 */
+  height: 100%; /* Garanta que o Card 2 ocupe todo o espaço disponível no Card 1 */
+  padding: 20px;
+}
+
+/* Estilos para a imagem do banner */
+.banner-image {
+  width: 100%;
+  margin-top: -75px;
+  position: absolute;
+  z-index: 3;
+}
