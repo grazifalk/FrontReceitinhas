@@ -38,3 +38,24 @@
   position: absolute;
   z-index: 3;
 }
+
+.roll {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d9d9d9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 20px;
+}

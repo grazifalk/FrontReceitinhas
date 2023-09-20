@@ -10,7 +10,7 @@ export const CreateRecipe = () => {
           <div className="card-2">
             <Sidebar />
             <BodyContent>
-            <Title>Cadastrar uma nova receita:</Title>
+            <Title>Enviar uma nova receita:</Title>
               <FormCreate />              
             </BodyContent>
           </div>

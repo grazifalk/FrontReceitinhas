@@ -37,11 +37,6 @@ export const Sidebar = () => {
           <MenuText to={"/about"}>Sobre</MenuText>
         </ContainerItem>
       </ContainerMenu>
-      <div>
-        <MenuText to={"/notfound"}>404</MenuText>
-        <MenuText to={"/recipe"}>Receita</MenuText>
-        Plaquinhas
-      </div>
     </Container>
   );
 };

@@ -11,7 +11,7 @@ import {
 } from "./style";
 import Photo from "../../../src/assets/examplerecipe.png";
 import Clock from "../../../src/assets/clockicon.svg";
-import Dificulty from "../../../src/assets/dificulty.svg";
+import Difficulty from "../../../src/assets/difficulty.svg";
 import Cost from "../../../src/assets/cost.svg";
 
 export const CardSmall = () => {
@@ -29,7 +29,7 @@ export const CardSmall = () => {
               <Text>Tempo de Preparo</Text>
             </ContainerLine>
             <ContainerLine>
-              <Icon src={Dificulty} alt="Dificuldade" />
+              <Icon src={Difficulty} alt="Dificuldade" />
               <Text>Dificuldade</Text>
             </ContainerLine>
             <ContainerLine>

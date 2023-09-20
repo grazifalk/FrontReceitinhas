@@ -9,6 +9,7 @@ export const ContainerShape = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   &:nth-child(odd) {
     background-color: #c4eff2;
@@ -60,10 +61,11 @@ export const ContainerPhoto = styled.div`
 `;
 
 export const Picture = styled.img`
-  width: 149px;
-  height: 151px;
+  width: 125px;
+  height: 127px;
   position: absolute;
-  left: -210%;
-  top: -15%;
+  left: -220%;
+  top: -10%;
   z-index: 1;
+  border-radius: 50%;
 `;

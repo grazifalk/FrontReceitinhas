@@ -12,12 +12,10 @@ export const Root = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipe/*" element={<Recipe />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/create" element={<CreateRecipe />}/>
-
-        {/* <Route path="/recipe" element={<Recipe />} /> */}
       </Routes>
     </BrowserRouter>
   );

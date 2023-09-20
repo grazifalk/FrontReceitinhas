@@ -35,3 +35,17 @@ export const MessageBox = styled.textarea`
   border: none;
   margin: 7px auto;
 `;
+
+export const SelectInput = styled.select`
+  width: 100%;
+  font-family: "Katibeh";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #303030;
+  background-color: #ffe9a7;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: none;
+  margin: 7px auto;
+`;

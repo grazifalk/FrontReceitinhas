@@ -52,9 +52,10 @@ export const ContainerDetails = styled.div`
 `;
 
 export const Icon = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   padding-right: 10px;
+  cursor: pointer;
 `;
 
 export const Text = styled.p`
@@ -66,8 +67,9 @@ export const Text = styled.p`
 `;
 
 export const Picture = styled.img`
-  width: 431, 69px;
-  height: 431, 69px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 `;
 
 export const ContainerImage = styled.div`
