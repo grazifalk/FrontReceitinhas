@@ -53,6 +53,11 @@ export const Recipe = () => {
     navigate(`/recipes`);
   };
 
+  const handleUpdateRecipe = async () => {
+    const recipeId = recipe.id;
+    navigate(`/recipes/update/${recipeId}`);
+  };
+
   if (!recipe) {
     return <div>Carregando...</div>;
   }
@@ -67,7 +72,11 @@ export const Recipe = () => {
               <ContainerTop>
                 <ContainerTitle>
                   <Title>{recipe.title}</Title>
-                  <Icon src={Edit} alt="Atualizar" />
+                  <Icon
+                    src={Edit}
+                    alt="Atualizar"
+                    onClick={() => handleUpdateRecipe(recipe.id)}
+                  />
                   <Icon
                     src={Delete}
                     alt="Deletar"

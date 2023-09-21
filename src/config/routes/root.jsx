@@ -5,6 +5,7 @@ import { Recipe } from "../../pages/recipe";
 import { About } from "../../pages/about";
 import { NotFound } from "../../pages/not-found";
 import { CreateRecipe } from "../../pages/create-recipe";
+import UpdateRecipe from "../../pages/update-recipe";
 
 export const Root = () => {
   return (
@@ -15,7 +16,8 @@ export const Root = () => {
         <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/create" element={<CreateRecipe />}/>
+        <Route path="/create" element={<CreateRecipe />} />
+        <Route path="/recipes/update/:id" element={<UpdateRecipe />} />
       </Routes>
     </BrowserRouter>
   );

@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Root } from "./config/routes/root";
 import GlobalStyle from "./style/style-config/style";
+import VLibras from "@djpfs/react-vlibras/";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         pauseOnHover
         theme="colored"
       />
+      <VLibras forceOnload={true} />
       <Root />
     </>
   );
