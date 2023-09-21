@@ -15,6 +15,7 @@ height: 200px; */
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
+  cursor: pointer;
 
   &:nth-child(odd) {
     background-color: #c4eff2;
@@ -68,10 +69,11 @@ export const ContainerPhoto = styled.div`
 `;
 
 export const Picture = styled.img`
-  width: 149px;
-  height: 151px;
+  width: 130px;
+  height: 130px;
   position: absolute;
-  left: -60%;
-  top: -10%;
+  left: -65%;
+  top: -5%;
   z-index: 1;
+  border-radius: 50%;
 `;

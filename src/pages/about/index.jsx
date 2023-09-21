@@ -1,14 +1,31 @@
 import { Sidebar } from "../../components/sidebar";
 import { BodyContent, Picture, Text, Title } from "./style";
 import Photo from "../../../src/assets/about-vector.png";
+import { SidebarMobile } from "../../components/sidebar-mobile";
+import { useEffect, useState } from "react";
 
 export const About = () => {
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
+
+  function handleWindowResize() {
+    setWindowSize(getWindowSize());
+  }
+
+  function getWindowSize() {
+    return window.screen.width;
+  }
+
   return (
     <>
+      {windowSize < 801 ? <SidebarMobile /> : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            <Sidebar />
+            {windowSize > 800 ? <Sidebar /> : null}
             <BodyContent>
               <Title>O projeto</Title>
               <Text>
@@ -18,8 +35,8 @@ export const About = () => {
               </Text>
               <Title>A autora</Title>
               <Text>
-                Graziela Falk, 33 anos. Desenvolvedora FullStack Trainee II, gosta
-                de colocar uma pitada de criatividade em tudo o que faz.
+                Graziela Falk, 33 anos. Desenvolvedora FullStack Trainee II,
+                gosta de colocar uma pitada de criatividade em tudo o que faz.
               </Text>
               <Picture src={Photo} alt="Autora" />
             </BodyContent>

@@ -9,6 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
+  cursor: pointer;
 `;
 
 export const Title = styled.h1`
@@ -48,8 +49,11 @@ export const Text = styled.p`
 `;
 
 export const ContainerPhoto = styled.div`
-  width: 230.84px;
-  height: 227.18px;
+
 `;
 
-export const Picture = styled.img``;
+export const Picture = styled.img`
+width: 190px;
+  height: 190px;
+  border-radius: 50%;
+`;

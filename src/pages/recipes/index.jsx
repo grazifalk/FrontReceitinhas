@@ -6,6 +6,7 @@ import ApiFindAll from "../../services/Api/ApiFindAll";
 import { Form, InputGroup } from "react-bootstrap";
 import { FiFilter } from "react-icons/fi";
 import { SearchComponent } from "../../components/search-component";
+import { SidebarMobile } from "../../components/sidebar-mobile";
 
 export const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -13,6 +14,19 @@ export const Recipes = () => {
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
+
+  function handleWindowResize() {
+    setWindowSize(getWindowSize());
+  }
+
+  function getWindowSize() {
+    return window.screen.width;
+  }
 
   const FindAll = async () => {
     const res = await ApiFindAll.RecipesFindAll();
@@ -71,10 +85,11 @@ export const Recipes = () => {
 
   return (
     <>
+      {windowSize < 801 ? <SidebarMobile /> : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            <Sidebar />
+            {windowSize > 800 ? <Sidebar /> : null}
             <BodyContent>
               <ContainerCards>
                 <div

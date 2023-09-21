@@ -19,7 +19,7 @@ export const BodyContent = styled.div`
 export const ContainerCards = styled.div`
   display: flex;
   justify-content: space-between;
-  position: absolute; /* Adicione o posicionamento absoluto */
-  top: 360px; /* Defina a distância desejada do rodapé */
-  z-index: 2;
+ // position: absolute; /* Adicione o posicionamento absoluto */
+ // top: 360px; /* Defina a distância desejada do rodapé */
+ // z-index: 2;
 `;

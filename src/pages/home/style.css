@@ -34,9 +34,9 @@
 /* Estilos para a imagem do banner */
 .banner-image {
   width: 100%;
-  margin-top: -75px;
-  position: absolute;
-  z-index: 3;
+ // margin-top: -75px;
+//  position: absolute;
+//  z-index: 3;
 }
 
 .roll {
@@ -56,6 +56,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: #013d32;
   border-radius: 20px;
 }

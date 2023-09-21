@@ -34,6 +34,7 @@ export const MessageBox = styled.textarea`
   padding: 5px 10px;
   border: none;
   margin: 7px auto;
+  resize: none;
 `;
 
 export const SelectInput = styled.select`

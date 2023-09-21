@@ -22,10 +22,24 @@ import ApiFindById from "../../services/Api/ApiFindById";
 import { useEffect, useState } from "react";
 import ApiDelete from "../../services/Api/ApiDelete";
 import { toast } from "react-toastify";
+import { SidebarMobile } from "../../components/sidebar-mobile";
 
 export const Recipe = () => {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+  }, []);
+
+  function handleWindowResize() {
+    setWindowSize(getWindowSize());
+  }
+
+  function getWindowSize() {
+    return window.screen.width;
+  }
 
   const navigate = useNavigate();
 
@@ -64,10 +78,11 @@ export const Recipe = () => {
 
   return (
     <>
+      {windowSize < 801 ? <SidebarMobile /> : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            <Sidebar />
+            {windowSize > 800 ? <Sidebar /> : null}
             <BodyContent>
               <ContainerTop>
                 <ContainerTitle>
@@ -76,11 +91,23 @@ export const Recipe = () => {
                     src={Edit}
                     alt="Atualizar"
                     onClick={() => handleUpdateRecipe(recipe.id)}
+                    tabIndex={0}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        handleUpdateRecipe(recipe.id);
+                      }
+                    }}
                   />
                   <Icon
                     src={Delete}
                     alt="Deletar"
                     onClick={() => handleDeleteRecipe(recipe.id)}
+                    tabIndex={0}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter") {
+                        handleDeleteRecipe(recipe.id);
+                      }
+                    }}
                   />
                 </ContainerTitle>
                 <ContainerImage>
