@@ -1,6 +1,7 @@
 import { Sidebar } from "../../components/sidebar";
 import "./style.css";
 import Banner from "../../../src/assets/newbanner.png";
+import BannerContrast from "../../../src/assets/bannerContrast.png";
 import { BodyContent, ContainerCards } from "./style";
 import { CardLarge } from "../../components/card-lg";
 import { CardSmall } from "../../components/card-sm";
@@ -8,7 +9,12 @@ import { useEffect, useState } from "react";
 import { SidebarMobile } from "../../components/sidebar-mobile";
 import ApiFindAll from "../../services/Api/ApiFindAll";
 
-export const Home = () => {
+export const Home = ({
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [recipes, setRecipes] = useState([]);
   const [recipeSelected, setRecipeSelected] = useState(null);
@@ -56,17 +62,39 @@ export const Home = () => {
 
   return (
     <>
-      {windowSize < 801 ? <SidebarMobile /> : null}
+      {windowSize < 801 ? (
+        <SidebarMobile
+          increaseFontSize={increaseFontSize}
+          decreaseFontSize={decreaseFontSize}
+          checar={checar}
+          HandledarkMode={HandledarkMode}
+        />
+      ) : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            {windowSize > 800 ? <Sidebar /> : null}
-            <BodyContent>
-              <img
-                src={Banner}
-                alt="Receitinhas by Grazi Falk"
-                className="banner-image"
+            {windowSize > 800 ? (
+              <Sidebar
+                increaseFontSize={increaseFontSize}
+                decreaseFontSize={decreaseFontSize}
+                checar={checar}
+                HandledarkMode={HandledarkMode}
               />
+            ) : null}
+            <BodyContent>
+              {checar ? (
+                <img
+                  src={BannerContrast}
+                  alt="Receitinhas by Grazi Falk"
+                  className="banner-image"
+                />
+              ) : (
+                <img
+                  src={Banner}
+                  alt="Receitinhas by Grazi Falk"
+                  className="banner-image"
+                />
+              )}
               <ContainerCards>
                 <div>
                   <CardLarge

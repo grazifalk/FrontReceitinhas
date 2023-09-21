@@ -4,7 +4,12 @@ import Photo from "../../../src/assets/about-vector.png";
 import { SidebarMobile } from "../../components/sidebar-mobile";
 import { useEffect, useState } from "react";
 
-export const About = () => {
+export const About = ({
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -21,11 +26,25 @@ export const About = () => {
 
   return (
     <>
-      {windowSize < 801 ? <SidebarMobile /> : null}
+      {windowSize < 801 ? (
+        <SidebarMobile
+          increaseFontSize={increaseFontSize}
+          decreaseFontSize={decreaseFontSize}
+          checar={checar}
+          HandledarkMode={HandledarkMode}
+        />
+      ) : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            {windowSize > 800 ? <Sidebar /> : null}
+            {windowSize > 800 ? (
+              <Sidebar
+                increaseFontSize={increaseFontSize}
+                decreaseFontSize={decreaseFontSize}
+                checar={checar}
+                HandledarkMode={HandledarkMode}
+              />
+            ) : null}
             <BodyContent>
               <Title>O projeto</Title>
               <Text>

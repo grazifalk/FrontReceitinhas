@@ -8,7 +8,7 @@ export const BodyContent = styled.div`
   align-items: center;
 
   border-radius: 30px;
-  background: #bbdac7;
+  background: var(--verdeBg);
 
   width: 100%;
   max-height: 90vh;

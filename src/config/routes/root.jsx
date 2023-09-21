@@ -7,17 +7,17 @@ import { NotFound } from "../../pages/not-found";
 import { CreateRecipe } from "../../pages/create-recipe";
 import UpdateRecipe from "../../pages/update-recipe";
 
-export const Root = () => {
+export const Root = ({HandledarkMode,checar,decreaseFontSize,increaseFontSize}) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipe/:id" element={<Recipe />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/create" element={<CreateRecipe />} />
-        <Route path="/recipes/update/:id" element={<UpdateRecipe />} />
+        <Route exact path="/" element={<Home increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="/recipes" element={<Recipes increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="/recipe/:id" element={<Recipe increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="/about" element={<About increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="*" element={<NotFound increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="/create" element={<CreateRecipe increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
+        <Route path="/recipes/update/:id" element={<UpdateRecipe increaseFontSize={increaseFontSize} decreaseFontSize={decreaseFontSize} checar={checar} HandledarkMode={HandledarkMode} />} />
       </Routes>
     </BrowserRouter>
   );

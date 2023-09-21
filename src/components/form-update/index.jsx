@@ -6,7 +6,13 @@ import { toast } from "react-toastify";
 import ApiFindAll from "../../services/Api/ApiFindAll";
 import { useNavigate } from "react-router-dom";
 
-export const FormUpdate = ({ recipe }) => {
+export const FormUpdate = ({
+  recipe,
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(
     recipe.selectedCategory
@@ -210,8 +216,8 @@ export const FormUpdate = ({ recipe }) => {
       <div style={{ marginTop: "10px", marginBottom: "20px" }}>
         <ButtonDefault
           action={handleSubmit}
-          bgColor="#c4eff2"
-          textColor="#303030"
+          bgColor="var(--azul)"
+          textColor="var(--preto)"
           type="submit"
         >
           Atualizar

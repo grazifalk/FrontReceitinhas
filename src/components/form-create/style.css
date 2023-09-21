@@ -1,6 +1,6 @@
 .button-add-ingredient {
-  background-color: #c4eff2;
-  color: #303030;
+  background-color: var(--azul);
+  color: var(--preto);
   padding: 5px;
   /* font-family: "Katibeh"; */
   border-radius: 5px;

@@ -6,10 +6,10 @@ export const MobileContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid #ffffff;
+  background: var(--branco);
+  border: 1px solid var(--branco);
   box-shadow: 10px 10px 24px rgba(204, 203, 203, 0.25);
-  border-radius: 30px;
+  /* border-radius: 30px; */
 `;
 
 export const MobileMenuButton = styled.button`
@@ -25,7 +25,7 @@ export const MobileSidebar = styled.div`
   left: 0;
   width: 40%;
   height: 100%;
-  background-color: white;
+  background-color: var(--branco);
   z-index: 999;
 `;
 
@@ -46,7 +46,7 @@ export const SidebarText = styled(Link)`
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #303030;
+  color: var(--preto);
 `;
 
 export const Logo = styled.img`

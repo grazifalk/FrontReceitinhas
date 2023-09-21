@@ -8,7 +8,12 @@ import { FiFilter } from "react-icons/fi";
 import { SearchComponent } from "../../components/search-component";
 import { SidebarMobile } from "../../components/sidebar-mobile";
 
-export const Recipes = () => {
+export const Recipes = ({
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [recipes, setRecipes] = useState([]);
   const [recipeSelected, setRecipeSelected] = useState(null);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
@@ -85,11 +90,25 @@ export const Recipes = () => {
 
   return (
     <>
-      {windowSize < 801 ? <SidebarMobile /> : null}
+      {windowSize < 801 ? (
+        <SidebarMobile
+          increaseFontSize={increaseFontSize}
+          decreaseFontSize={decreaseFontSize}
+          checar={checar}
+          HandledarkMode={HandledarkMode}
+        />
+      ) : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            {windowSize > 800 ? <Sidebar /> : null}
+            {windowSize > 800 ? (
+              <Sidebar
+                increaseFontSize={increaseFontSize}
+                decreaseFontSize={decreaseFontSize}
+                checar={checar}
+                HandledarkMode={HandledarkMode}
+              />
+            ) : null}
             <BodyContent>
               <ContainerCards>
                 <div
@@ -137,6 +156,10 @@ export const Recipes = () => {
                           key={recipe.id}
                           recipe={recipe}
                           setRecipeSelected={setRecipeSelected}
+                          increaseFontSize={increaseFontSize}
+                          decreaseFontSize={decreaseFontSize}
+                          checar={checar}
+                          HandledarkMode={HandledarkMode}
                         />
                       );
                     })

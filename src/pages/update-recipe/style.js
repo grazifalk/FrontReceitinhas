@@ -8,7 +8,7 @@ export const BodyContent = styled.div`
   align-items: center;
 
   border-radius: 30px;
-  background: #bbdac7;
+  background: var(--verdeBg);
 
   width: 100%;
   max-height: 90vh;
@@ -21,5 +21,5 @@ export const Title = styled.p`
   font-weight: 400;
   font-size: 35px;
   line-height: 53px;
-  color: #303030;
+  color: var(--preto);
 `;

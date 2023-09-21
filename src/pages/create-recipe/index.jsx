@@ -4,7 +4,12 @@ import { Sidebar } from "../../components/sidebar";
 import { BodyContent, Title } from "./style";
 import { SidebarMobile } from "../../components/sidebar-mobile";
 
-export const CreateRecipe = () => {
+export const CreateRecipe = ({
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -21,14 +26,33 @@ export const CreateRecipe = () => {
 
   return (
     <>
-      {windowSize < 801 ? <SidebarMobile /> : null}
+      {windowSize < 801 ? (
+        <SidebarMobile
+          increaseFontSize={increaseFontSize}
+          decreaseFontSize={decreaseFontSize}
+          checar={checar}
+          HandledarkMode={HandledarkMode}
+        />
+      ) : null}
       <div className="home-page">
         <div className="card-1">
           <div className="card-2">
-            {windowSize > 800 ? <Sidebar /> : null}
+            {windowSize > 800 ? (
+              <Sidebar
+                increaseFontSize={increaseFontSize}
+                decreaseFontSize={decreaseFontSize}
+                checar={checar}
+                HandledarkMode={HandledarkMode}
+              />
+            ) : null}
             <BodyContent>
               <Title>Enviar uma nova receita:</Title>
-              <FormCreate />
+              <FormCreate
+                increaseFontSize={increaseFontSize}
+                decreaseFontSize={decreaseFontSize}
+                checar={checar}
+                HandledarkMode={HandledarkMode}
+              />
             </BodyContent>
           </div>
         </div>

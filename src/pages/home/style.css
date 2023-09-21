@@ -1,6 +1,6 @@
 /* Estilos gerais da página */
 .home-page {
-  background-color: #a6ceb6;
+  background-color: var(--verdeBg);
   min-height: 100vh; /* Isso garante que a página ocupe toda a altura da tela */
   display: flex;
   justify-content: center;
@@ -24,7 +24,8 @@
 .card-2 {
   display: flex;
   border-radius: 30px;
-  background: #f5f3f0;
+  /* background: #f5f3f0; */
+  background: var(--container2);
   overflow: hidden;
   width: 100%; /* Garanta que o Card 2 ocupe todo o espaço disponível no Card 1 */
   height: 100%; /* Garanta que o Card 2 ocupe todo o espaço disponível no Card 1 */
@@ -52,10 +53,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #d9d9d9;
+  background: #D9D9D9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #013d32;
+  background-color: var(--scrollbar);
   border-radius: 20px;
 }

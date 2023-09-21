@@ -6,7 +6,12 @@ import { toast } from "react-toastify";
 import ApiFindAll from "../../services/Api/ApiFindAll";
 import "./style.css";
 
-export const FormCreate = () => {
+export const FormCreate = ({
+  HandledarkMode,
+  checar,
+  decreaseFontSize,
+  increaseFontSize,
+}) => {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -203,8 +208,8 @@ export const FormCreate = () => {
       <div style={{ marginTop: "10px", marginBottom: "20px" }}>
         <ButtonDefault
           action={handleSubmit}
-          bgColor="#c4eff2"
-          textColor="#303030"
+          bgColor="var(--azul)"
+          textColor="var(--preto)"
           type="submit"
         >
           Enviar
